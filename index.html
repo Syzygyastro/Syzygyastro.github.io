@@ -5,57 +5,137 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Resume</title>
     <style>
-        /* General Styling */
+        /* General Styles */
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             background-color: #121212;
             color: #ffffff;
-            text-align: center;
-        }
-        h1 {
-            font-size: 2.5em;
-            margin-top: 20px;
-            color: #ff6f61;
-        }
-        p {
-            font-size: 1.2em;
-            margin: 20px 0;
-        }
-        a {
-            color: #ff6f61;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        a:hover {
-            text-decoration: underline;
         }
 
-        /* PDF Viewer Styling */
-        .pdf-container {
-            margin: 30px auto;
-            padding: 10px;
-            background: #1e1e1e;
-            border: 1px solid #333;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            width: 90%;
-            max-width: 1000px;
-            border-radius: 10px;
+        header {
+            background-color: #1e1e1e;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #333;
         }
-        iframe {
-            width: 100%;
-            height: 800px;
-            border: none;
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8em;
+            color: #ff6f61;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 1em;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #ff6f61;
+        }
+
+        .hero-section {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('background.jpg') center/cover no-repeat;
+        }
+
+        .hero-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .hero-section p {
+            font-size: 1.2em;
+            max-width: 600px;
+            margin: 0 auto;
+            color: #ddd;
+        }
+
+        .resume-section {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #1e1e1e;
+        }
+
+        .resume-section img {
+            max-width: 90%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .resume-section a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            font-size: 1.2em;
+            color: #ff6f61;
+            border: 2px solid #ff6f61;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .resume-section a:hover {
+            background-color: #ff6f61;
+            color: #121212;
+        }
+
+        footer {
+            background-color: #1e1e1e;
+            padding: 20px;
+            text-align: center;
+            color: #bbb;
         }
     </style>
 </head>
 <body>
-    <h1>My Resume</h1>
-    <p>Click <a href="kk_resume_2025.pdf" target="_blank">here</a> to download my resume.</p>
+    <!-- Header Section -->
+    <header>
+        <h1>Kshitij Kapoor</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="pdf-container">
-        <iframe src="kk_resume_2025.pdf"></iframe>
-    </div>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h2>Welcome to My Portfolio</h2>
+        <p>Explore my work, my achievements, and my journey as a developer and creator.</p>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume-section">
+        <h2>My Resume</h2>
+        <img src="resume_ss.png" alt="Kshitij Kapoor's Resume">
+        <a href="kk_resume_2025.pdf" download>Download Resume</a>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Kshitij Kapoor. All rights reserved.</p>
+    </footer>
 </body>
 </html>
-
