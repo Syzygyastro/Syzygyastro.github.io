@@ -5,56 +5,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Resume</title>
     <style>
-        /* General Styling */
+        /* General Styles */
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #121212;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
             color: #ffffff;
+        }
+
+        header {
             text-align: center;
+            padding: 20px 0;
+            background: rgba(0, 0, 0, 0.5);
+            border-bottom: 2px solid #555;
         }
-        h1 {
+
+        header h1 {
+            margin: 0;
             font-size: 2.5em;
-            margin-top: 20px;
             color: #ff6f61;
+            font-family: 'Orbitron', sans-serif;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
         }
-        p {
+
+        header p {
+            margin: 10px 0 0;
             font-size: 1.2em;
-            margin: 20px 0;
+            color: #ccc;
         }
+
         a {
-            color: #ff6f61;
             text-decoration: none;
+            color: #ff6f61;
             font-weight: bold;
         }
+
         a:hover {
             text-decoration: underline;
         }
 
-        /* PDF Viewer Styling */
-        .pdf-container {
-            margin: 30px auto;
-            padding: 10px;
-            background: #1e1e1e;
-            border: 1px solid #333;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            width: 90%;
-            max-width: 1000px;
-            border-radius: 10px;
+        .resume-section {
+            text-align: center;
+            padding: 50px 20px;
         }
-        iframe {
+
+        .resume-section h2 {
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            font-family: 'Orbitron', sans-serif;
+            color: #ffffff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .resume-section img {
+            max-width: 90%;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+            border: 2px solid #ff6f61;
+        }
+
+        .resume-section a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            font-size: 1.2em;
+            color: #121212;
+            background-color: #ff6f61;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(255, 111, 97, 0.5);
+        }
+
+        .resume-section a:hover {
+            background-color: #f45135;
+            color: #ffffff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9em;
+            color: #ccc;
+            background: rgba(0, 0, 0, 0.5);
+            border-top: 2px solid #555;
+        }
+
+        /* Stars Animation */
+        body::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            height: 800px;
-            border: none;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/stardust.png');
+            opacity: 0.1;
+            pointer-events: none;
         }
     </style>
 </head>
 <body>
-    <h1>My Resume</h1>
-    <p>Click <a href="kk_resume_2025.pdf" target="_blank">here</a> to download my resume.</p>
+    <!-- Header Section -->
+    <header>
+        <h1>Kshitij Kapoor</h1>
+        <p>Discover My Journey Across the Stars</p>
+    </header>
 
-    <div class="pdf-container">
-        <iframe src="kk_resume_2025.pdf"></iframe>
-    </div>
+    <!-- Resume Section -->
+    <section class="resume-section">
+        <h2>My Resume</h2>
+        <img src="resume-screenshot.png" alt="Kshitij Kapoor's Resume">
+        <a href="kk_resume_2025.pdf" download>Download Resume</a>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Kshitij Kapoor | Built for the Cosmos</p>
+    </footer>
 </body>
 </html>
