@@ -8,122 +8,110 @@
         /* General Styles */
         body {
             margin: 0;
-            font-family: 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            color: #ffffff;
-        }
-
-        header {
-            text-align: center;
-            padding: 20px 0;
-            background: rgba(0, 0, 0, 0.5);
-            border-bottom: 2px solid #555;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-            color: #ff6f61;
             font-family: 'Orbitron', sans-serif;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            background-color: #000000;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
 
-        header p {
-            margin: 10px 0 0;
-            font-size: 1.2em;
-            color: #ccc;
+        .container {
+            width: 90%;
+            max-width: 800px;
+            text-align: left;
         }
 
-        a {
-            text-decoration: none;
-            color: #ff6f61;
+        .header, .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1, .footer span {
+            font-size: 1.5em;
             font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
         }
 
-        a:hover {
-            text-decoration: underline;
+        .header span, .footer span {
+            font-size: 1.2em;
+            color: #777;
         }
 
-        .resume-section {
-            text-align: center;
-            padding: 50px 20px;
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-top: 1px solid #ffffff;
+            border-bottom: 1px solid #ffffff;
+            padding: 20px 0;
         }
 
-        .resume-section h2 {
-            font-size: 2.2em;
-            margin-bottom: 20px;
-            font-family: 'Orbitron', sans-serif;
-            color: #ffffff;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        .content h2 {
+            font-size: 3em;
+            font-weight: bold;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .content p {
+            font-size: 1em;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+            line-height: 1.5;
+            margin: 0;
+            width: 65%;
+        }
+
+        .iframe-container {
+            width: 100%;
+            margin: 20px 0;
+            border: 2px solid #ffffff;
         }
 
         iframe {
-            width: 90%;
-            height: 800px;
-            border-radius: 10px;
-            border: 2px solid #ff6f61;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
-        }
-
-        .resume-section a {
-            display: inline-block;
-            margin-top: 20px;
-            text-decoration: none;
-            font-size: 1.2em;
-            color: #121212;
-            background-color: #ff6f61;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(255, 111, 97, 0.5);
-        }
-
-        .resume-section a:hover {
-            background-color: #f45135;
-            color: #ffffff;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            font-size: 0.9em;
-            color: #ccc;
-            background: rgba(0, 0, 0, 0.5);
-            border-top: 2px solid #555;
-        }
-
-        /* Stars Animation */
-        body::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
-            height: 100%;
-            background: url('https://www.transparenttextures.com/patterns/stardust.png');
-            opacity: 0.1;
-            pointer-events: none;
+            height: 500px;
+            border: none;
         }
+
+        /* Font Import */
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
     </style>
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <h1>Kshitij Kapoor</h1>
-        <p>Discover My Journey Across the Stars</p>
-    </header>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <h1>Projects</h1>
+            <span>00</span>
+        </div>
 
-    <!-- Resume Section -->
-    <section class="resume-section">
-        <h2>My Resume</h2>
-        <iframe src="kk_resume_2025.pdf" title="Resume PDF"></iframe>
-        <a href="kk_resume_2025.pdf" download>Download Resume</a>
-    </section>
+        <!-- Content Section -->
+        <div class="content">
+            <h2>Resume</h2>
+            <p>
+                This resume outlines my journey as a developer, showcasing my skills, experiences, and education. 
+                Below, you can preview or download the full version of the resume.
+            </p>
+        </div>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2025 Kshitij Kapoor | Built for the Cosmos</p>
-    </footer>
+        <!-- iFrame Section -->
+        <div class="iframe-container">
+            <iframe src="kk_resume_2025.pdf" title="Resume PDF"></iframe>
+        </div>
+
+        <!-- Footer Section -->
+        <div class="footer">
+            <span>Main Page</span>
+            <span>01</span>
+        </div>
+    </div>
 </body>
 </html>
